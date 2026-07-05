@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>El Filò — Pizzeria a Levico Terme</title>
+<meta name="description" content="El Filò, pizzeria a Levico Terme. Pizza cotta nel forno a legna in un locale tutto in legno. Aperto mercoledì–domenica, 18–23.">
+<link rel="icon" href="images/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,900;1,9..144,500&family=Karla:wght@400;500;700&family=Caveat:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+  <div class="wood topbar">
+    <a class="brand" href="index.html" aria-label="El Filò — home">
+      <img src="images/logo-big.jpg" alt="El Filò">
+    </a>
+    <nav class="main" id="menuNav">
+      <a href="index.html" class="active">Home</a>
+      <a href="chi-siamo.html">Chi siamo</a>
+      <a href="menu.html">Menù</a>
+      <a href="pizza-del-mese.html">Pizza del mese</a>
+      <a href="contatti.html">Contatti</a>
+    </nav>
+    <div class="nav-tools">
+      <a class="btn btn--fire" href="tel:+390461706240">Chiama</a>
+      <button class="navtoggle" id="navToggle" aria-label="Apri menù" aria-expanded="false" aria-controls="menuNav">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- HERO con foto reale del locale -->
+<section class="hero" style="background:#1f120b url('images/IMG_9890-scaled.jpg') center/cover no-repeat">
+  <div class="wrap hero-inner">
+    <h1>Pizza nel forno a legna, <em>come una volta</em></h1>
+    <p class="lead">Il <em>filò</em> era il ritrovo serale attorno al fuoco. Da noi, a Levico Terme, il fuoco è quello del forno — in un locale tutto in legno.</p>
+    <div class="hero-cta">
+      <a class="btn btn--fire" href="menu.html">Guarda il menù</a>
+      <a class="btn btn--green" href="tel:+390461706240">Prenota un tavolo</a>
+    </div>
+  </div>
+</section>
+
+<!-- FASCIA INFO: orari + posizione GRANDI -->
+<section class="info-band" style="padding:0">
+  <div class="grid">
+    <div class="info-col">
+      <h2>🕕 Orari</h2>
+      <div class="hours-big">
+        <div class="row closed"><span>Lunedì</span><b>Chiuso</b></div>
+        <div class="row closed"><span>Martedì</span><b>Chiuso</b></div>
+        <div class="row"><span>Mercoledì</span><b class="open">18:00 – 23:00</b></div>
+        <div class="row"><span>Giovedì</span><b class="open">18:00 – 23:00</b></div>
+        <div class="row"><span>Venerdì</span><b class="open">18:00 – 23:00</b></div>
+        <div class="row"><span>Sabato</span><b class="open">18:00 – 23:00</b></div>
+        <div class="row"><span>Domenica</span><b class="open">18:00 – 23:00</b></div>
+      </div>
+    </div>
+    <div class="info-col">
+      <h2>📍 Dove siamo</h2>
+      <div class="place-big">
+        <span class="name">El Filò</span>
+        Viale Stazione 64, 38056 Levico Terme (TN)<br>
+        <span style="font-size:1.1rem;color:#d8c6ac">Valsugana, Trentino</span>
+        <div style="margin-top:1rem">
+          <a href="tel:+390461706240">📞 +39 0461 706240</a>
+        </div>
+      </div>
+      <div class="place-actions">
+        <a class="btn btn--green" href="contatti.html">Come arrivare</a>
+        <a class="btn btn--ghost" href="pizza-del-mese.html">Pizza del mese</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ASSAGGIO CHI SIAMO -->
+<section>
+  <div class="wrap split">
+    <div class="story reveal">
+      <p class="eyebrow">Chi siamo</p>
+      <h2>Un locale tutto in legno,<br>a Levico Terme</h2>
+      <p class="drop">Travi a vista, pavimento di legno, tavoli grandi da condividere. El Filò nasce per farti sentire a casa: impasto a lunga lievitazione, cottura nel forno a legna e pizze per tutti i gusti.</p>
+      <a class="btn btn--green" href="chi-siamo.html">Scopri la nostra storia</a>
+    </div>
+    <img class="reveal" src="images/IMG_9908-2-scaled.jpg" alt="Interno della pizzeria El Filò">
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <img src="images/logo-big.jpg" alt="El Filò">
+    <nav class="fnav">
+      <a href="index.html">Home</a>
+      <a href="chi-siamo.html">Chi siamo</a>
+      <a href="menu.html">Menù</a>
+      <a href="pizza-del-mese.html">Pizza del mese</a>
+      <a href="contatti.html">Contatti</a>
+    </nav>
+    <p style="margin:.5rem 0 0">📞 +39 0461 706240 · Viale Stazione 64, Levico Terme (TN) · Mer–Dom 18–23</p>
+    <p class="fine">Prototipo · El Filò — © 2026. Indirizzo e menù verranno completati con i materiali ufficiali.</p>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>

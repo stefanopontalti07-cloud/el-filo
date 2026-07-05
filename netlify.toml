@@ -1,0 +1,9 @@
+# Sito statico El Filò — nessuna build, si pubblica la cartella così com'è
+[build]
+  publish = "."
+
+# SPA/404: mostra una pagina di cortesia se un URL non esiste (opzionale)
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 404
