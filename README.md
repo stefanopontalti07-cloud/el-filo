@@ -17,6 +17,11 @@ python -m http.server 8940
 ```
 Poi apri http://localhost:8940
 
-## Deploy (automatico via Netlify)
-Repo collegato a Netlify: ogni `git push` sul branch `main` ripubblica il sito.
-Impostazioni Netlify: build command vuoto, publish directory = `.` (vedi `netlify.toml`).
+## Deploy (automatico via GitHub Pages)
+Repo: https://github.com/stefanopontalti07-cloud/el-filo
+Sito live: https://stefanopontalti07-cloud.github.io/el-filo/
+
+GitHub Pages pubblica il branch `main` (root). Ogni `git push` su `main` ripubblica il sito
+in ~1 minuto. Path relativi obbligatori (il sito gira sul sottopercorso `/el-filo/`).
+
+Nota: `netlify.toml` resta nel repo ma non è usato (account Netlify a crediti esauriti).
