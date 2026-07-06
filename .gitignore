@@ -7,3 +7,6 @@ desktop.ini
 # scarti temporanei
 *.tmp
 *.log
+
+# Local Netlify folder
+.netlify
