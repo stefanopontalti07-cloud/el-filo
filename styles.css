@@ -12,6 +12,10 @@
   --ember-soft:#EFA45C;
   --green-btn:#3C4A2C;      /* verde bosco scuro — solo bottoni */
   --green-btn-h:#4C5D38;
+  --btn:#4A2E1C;            /* marrone scuro — bottoni azione (Chiama/Menù/Prenota) */
+  --btn-h:#5E3A22;
+  --btn-sh:#2A1810;
+  --green-ico:#5E7539;      /* verde bosco — icone (telefono, orari, luogo) */
   --cream:#F4E9D4;
   --cream-2:#EADCC0;
   --ink:#241812;
@@ -52,15 +56,22 @@ img{max-width:100%;display:block}
   padding:.85rem 1.5rem;border-radius:3px;text-decoration:none;cursor:pointer;border:2px solid transparent;
   transition:transform .15s ease, background .2s ease, box-shadow .2s ease;letter-spacing:.01em;
 }
-.btn--fire{background:var(--ember);color:#2A1206;box-shadow:0 6px 0 #a94e15}
-.btn--fire:hover{transform:translateY(-2px);box-shadow:0 8px 0 #a94e15}
-.btn--fire:active{transform:translateY(2px);box-shadow:0 2px 0 #a94e15}
-.btn--green{background:var(--green-btn);color:var(--cream);box-shadow:0 5px 0 #26301b}
-.btn--green:hover{transform:translateY(-2px);background:var(--green-btn-h);box-shadow:0 7px 0 #26301b}
-.btn--green:active{transform:translateY(2px);box-shadow:0 2px 0 #26301b}
+/* Bottoni azione: marrone scuro uniforme, sottile bordo brace per staccare su legno e crema */
+.btn--fire,.btn--green{background:var(--btn);color:var(--cream);border-color:rgba(225,115,43,.55);box-shadow:0 5px 0 var(--btn-sh)}
+.btn--fire:hover,.btn--green:hover{transform:translateY(-2px);background:var(--btn-h);border-color:var(--ember);box-shadow:0 7px 0 var(--btn-sh)}
+.btn--fire:active,.btn--green:active{transform:translateY(2px);box-shadow:0 2px 0 var(--btn-sh)}
 .btn--ghost{background:transparent;color:var(--cream);border-color:rgba(244,233,212,.45)}
 .btn--ghost:hover{border-color:var(--ember-soft);color:var(--ember-soft)}
 a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var(--focus);outline-offset:3px}
+
+/* --- Icone verde bosco (rimpiazzano le emoji colorate) --- */
+.ic{display:inline-block;width:1em;height:1em;vertical-align:-.14em;flex:none;background:var(--green-ico);
+  -webkit-mask:center/contain no-repeat;mask:center/contain no-repeat}
+.ic-phone{-webkit-mask-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z'/%3E%3C/svg%3E");mask-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z'/%3E%3C/svg%3E")}
+.ic-clock{-webkit-mask-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z'/%3E%3C/svg%3E");mask-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z'/%3E%3C/svg%3E")}
+.ic-pin{-webkit-mask-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 0 1 0-5 2.5 2.5 0 0 1 0 5z'/%3E%3C/svg%3E");mask-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 0 1 0-5 2.5 2.5 0 0 1 0 5z'/%3E%3C/svg%3E")}
+.ic-chat{-webkit-mask-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z'/%3E%3C/svg%3E");mask-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z'/%3E%3C/svg%3E")}
+.ic--head{width:1.05em;height:1.05em;margin-right:.15em}
 
 /* --- Header --- */
 header{position:sticky;top:0;z-index:50}
@@ -140,6 +151,24 @@ section{padding:5rem 0}
 .dish-name{font-weight:700;color:var(--ink)}
 .dish-desc{display:block;font-weight:400;font-size:.9rem;color:#6a5240;margin-top:.15rem}
 .dish-price{font-family:var(--font-display);font-weight:600;color:var(--wood-800);white-space:nowrap;font-size:1.1rem}
+
+/* --- Menu a tendina (accordion) --- */
+.menu-acc{max-width:860px;margin:0 auto;display:grid;gap:1rem}
+.acc{background:var(--cream-2);border:1px solid var(--wood-600);border-radius:8px;overflow:hidden}
+.acc>summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:.9rem;
+  padding:1.05rem 1.4rem;font-family:var(--font-display);font-weight:900;font-size:clamp(1.2rem,3vw,1.5rem);color:var(--wood-800)}
+.acc>summary::-webkit-details-marker{display:none}
+.acc>summary .lbl{flex:1}
+.acc>summary .tag{font-family:var(--font-body);font-size:.66rem;letter-spacing:.16em;text-transform:uppercase;font-weight:700;
+  color:var(--ember);white-space:nowrap}
+.acc>summary .tag--soon{color:#8a6f57}
+.acc>summary .chev{flex:none;color:var(--wood-600);transition:transform .25s ease}
+.acc[open]>summary .chev{transform:rotate(180deg)}
+.acc[open]>summary{border-bottom:2px solid var(--wood-600)}
+.acc-body{padding:.4rem 1.4rem 1.1rem}
+.acc-body .dish:first-child{padding-top:.9rem}
+.acc-note{font-family:var(--font-hand);font-size:1.2rem;color:var(--wood-700);padding:.9rem 0 .2rem}
+.acc-extra{display:block;font-size:.82rem;color:var(--ember);font-weight:700;margin-top:.5rem;letter-spacing:.02em}
 
 /* --- Pizza del mese (lavagna) --- */
 .board-wrap{background:var(--wood-900)}
