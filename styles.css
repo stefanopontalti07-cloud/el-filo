@@ -169,6 +169,8 @@ section{padding:5rem 0}
 .acc-body .dish:first-child{padding-top:.9rem}
 .acc-note{font-family:var(--font-hand);font-size:1.2rem;color:var(--wood-700);padding:.9rem 0 .2rem}
 .acc-extra{display:block;font-size:.82rem;color:var(--ember);font-weight:700;margin-top:.5rem;letter-spacing:.02em}
+.menu-foot{max-width:860px;margin:1.6rem auto 0;text-align:center;font-size:.92rem;color:#6a5240}
+.menu-foot span{font-size:.82rem;color:#8a7159}
 
 /* --- Pizza del mese (lavagna) --- */
 .board-wrap{background:var(--wood-900)}
